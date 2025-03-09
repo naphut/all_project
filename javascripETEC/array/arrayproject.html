@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <style>
+        .container1 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        }
+    </style> -->
+    <title>Responsive Array Dimensional</title>
+    <!-- Link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container mt-5 p-3 border border-3" style="max-width: 500px;">
+        <h1 class="text-center">Array Dimensional</h1>
+        <hr>
+        <form>
+            <div class="form-group d-flex flex-wrap align-items-center gap-3">
+                <label for="value" class="fw-bold">Input value:</label>
+                <input type="text" id="value" class="form-control flex-grow-1">
+            </div>
+            <div class="d-flex justify-content-center flex-wrap gap-2 mt-4">
+                <button type="button" class="btn btn-primary btnAdd">Add</button>
+                <button type="button" class="btn btn-success btnViews">Views</button>
+                <button type="button" class="btn btn-warning btnSearch">Search</button>
+                <button type="button" class="btn btn-danger btnDelete">Delete</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container mt-5" style="max-width: 500px;">
+        <table class="table table-hover align-middle table-bordered text-center">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Element</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <!-- Array data will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/javas_project.js"></script>
+</body>
+</html>

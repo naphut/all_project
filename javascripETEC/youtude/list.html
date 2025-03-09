@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Dimensional</title>
+    <style>
+        /* Add your own styling */
+
+        
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            color: blueviolet;
+        }
+        table, th, td {
+            border: 1px solid rebeccapurple;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        button {
+            margin: 5px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #b30000;
+        }
+
+        #addBtn { background-color: #007bff; }
+        #viewBtn { background-color: #28a745; }
+        #searchBtn { background-color: #17a2b8; }
+        #deleteBtn { background-color: #dc3545; }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;">Array Dimensional</h2>
+    <div style="text-align: center;">
+        <label for="inputValue">Input Value:</label>
+        <input type="text" id="inputValue">
+        <br><br>
+        <button onclick="addValue()" id="addBtn">Add</button>
+        <button onclick="viewValues()" id="viewBtn">View</button>
+        <button onclick="searchValue()" id="searchBtn">Search</button>
+        <button onclick="deleteValue()" id="deleteBtn">Delete</button>
+    </div>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Dynamic rows will be added here -->
+        </tbody>
+    </table>
+
+    <script>
+        let valuesArray = []; // Array to hold the input values
+
+        function addValue() {
+            let inputValue = document.getElementById('inputValue').value;
+            if (inputValue) {
+                valuesArray.push(inputValue); // Add value to array
+                document.getElementById('inputValue').value = ''; // Clear input
+                alert('Value added successfully!');
+            } else {
+                alert('Please enter a value.');
+            }
+        }
+
+        function viewValues() {
+            let tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = ''; // Clear the table body before displaying
+
+            valuesArray.forEach((value, index) => {
+                let row = `<tr><td>${index + 1}</td><td>${value}</td></tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
+
+        function searchValue() {
+            let searchTerm = document.getElementById('inputValue').value;
+            if (!searchTerm) {
+                alert('Please enter a value to search.');
+                return;
+            }
+
+            let foundIndex = valuesArray.findIndex(value => value === searchTerm);
+            if (foundIndex >= 0) {
+                alert(`Value found at index ${foundIndex + 1}.`);
+            } else {
+                alert('Value not found.');
+            }
+        }
+
+        function deleteValue() {
+            let deleteTerm = document.getElementById('inputValue').value;
+            if (!deleteTerm) {
+                alert('Please enter a value to delete.');
+                return;
+            }
+
+            let indexToDelete = valuesArray.findIndex(value => value === deleteTerm);
+            if (indexToDelete >= 0) {
+                valuesArray.splice(indexToDelete, 1); // Remove the value from array
+                alert(`Value deleted successfully.`);
+            } else {
+                alert('Value not found.');
+            }
+        }
+        
+    </script>
+</body>
+</html>

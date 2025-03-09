@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Student</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: aqua;
+
+    }
+    .containers{
+        padding: 10px;
+    }
+    .add-student{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        background-color: rgba(123, 123, 123, 0.612);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+    }
+    form{
+        width: 500px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+</style>
+<body>
+    <div class="containers">
+        <h1 class="my-2">Student`s List</h1>
+        <button class="btn btn-primary float-end mb-2" id="btnAdd"><i class="fa-solid fa-plus"></i>Add Student</button>
+        <table class="table table-hover table-dark align-middle" style="table-layout: fixed;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>C PROGRAM</th>
+                    <th>ENGLISH</th>
+                    <th>MATH</th>
+                    <th>PROFILE</th>
+                    <th>TOTAL</th>
+                    <th>AVERAGE</th>
+                    <th>GRADE</th>
+                    <th>ACTION</th>    
+                </tr>
+            </thead>
+            <tbody class="tbody">
+            </tbody>
+        </table>
+    </div>
+    <div class="add-student">    
+        <form action="">
+            <h3>Add Student</h3>
+            <label for="" class="form-label mt-2" >ID</label>
+            <input type="text" name="" id="id" class="form-control">
+            <label for="" class="form-label mt-2">NAME</label>
+            <input type="text" name="" id="name" class="form-control">
+            <label for="" class="form-label mt-2">C PROGRAM</label>
+            <input type="text" name="" id="cProgram" class="form-control">
+            <label for="" class="form-label mt-2">ENGLISH</label>
+            <input type="text" name="" id="eng" class="form-control">
+            <label for="" class="form-label mt-2">MATH</label>
+            <input type="text" name="" id="math" class="form-control">
+            <label for="" class="form-label mt-2">PROFILE</label>
+            <input type="file" name="" id="profile" class="form-control">
+            <button type="button" class="btn btn-primary mt-3 btn-save">Save</button>
+            <button type="button" class="btn btn-danger mt-3 btn-cancel">Cancel</button>
+        </form>
+
+    </div>
+</body>
+<script>
+    const btnAdd=document.querySelector('#btnAdd');
+    const popUp=document.querySelector('.add-student');
+    const tbody=document.querySelector('.tbody');
+    const btnCancel=document.querySelector('.btn-cancel');
+    btnAdd.addEventListener('click',()=>{
+        popUp.style.visibility='visible'
+        clearData();
+
+    })
+    
+
+    let id=document.querySelector('#id');
+    let name=document.querySelector('#name');
+    let cProgram=document.querySelector('#cProgram');
+    let eng=document.querySelector('#eng');
+    let math=document.querySelector('#math');
+    let profile=document.querySelector('#profile');
+    const btnSave=document.querySelector('.btn-save');
+    const Total=()=>{
+        return Number(cProgram.value)+Number(eng.value)+Number(math.value);
+    }
+    const Average=()=>{
+        return Total()/3;
+    }
+    const Grade=()=>{
+        let grade='';
+        if(Average()>=90 && Average()<=100){
+            grade='A';
+        }else if(Average()>=80 && Average()<90){
+            grade='B';
+        }else if(Average()>=70 && Average()<80){
+            grade='C'
+        }else if(Average()>=60 && Average()<70){
+            grade='D'
+        }else if(Average()>=50 && Average()<60){
+            grade='E'
+        }else{
+            grade='F'
+        }
+        return grade;
+    }
+    btnSave.addEventListener('click',function(){
+        popUp.style.visibility='hidden'
+        let profiles=profile.files[0];
+        tbody.innerHTML+=`
+            <tr>
+                    <td>${id.value}</td>
+                    <td>${name.value}</td>     
+                    <td>${cProgram.value}</td>
+                    <td>${eng.value}</td>
+                    <td>${math.value}</td>
+                    <td>
+                        <img width="80px" src="${URL.createObjectURL(profiles)}" alt="">
+                    </td>
+                    <td>${Total()}</td>
+                    <td>${Average().toFixed(2)}</td>
+                    <td>${Grade()}</td>
+                    <td>
+                        <button class="btn btn-success me-1">Edit</button>
+                        <button class="btn btn-danger" onclick="deleteProducts(this)">Delete</button>
+                    </td>
+                    
+                </tr> 
+        `;
+    })
+    btnCancel.addEventListener('click',function(){
+        popUp.style.visibility='hidden'
+    }) 
+    const clearData=()=>{
+        let id=document.querySelector('#id');
+        let name=document.querySelector('#name');
+        let cProgram=document.querySelector('#cProgram');
+        let eng=document.querySelector('#eng');
+        let math=document.querySelector('#math');
+        let profile=document.querySelector('#profile'); 
+        id.value='';
+        name.value='';
+        cProgram.value='';
+        eng.value='';
+        math.value='';
+        profile.value='';
+    }
+    const deleteProducts=(rowData)=>{
+        row=rowData.parentElement;
+        if(confirm('Are you sure to delete?')){
+            document.getElementsByClassName('tbody')[0].deleteRow(row.rowIndex)   
+        }   
+    }
+</script>
+</html>

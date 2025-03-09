@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    .container{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        padding: 20px;
+        border-radius: 10px;
+        /* background-color: red; */
+    }
+    .form-group{
+        position: relative;
+    }
+    .icon{
+        position: relative;
+       
+    }
+    .icon .fa-regular{
+        position: absolute;
+        top: 0;
+    }
+    .fa-sun{
+        display: none;
+    }
+    .fa-regular{
+        position: absolute;
+        top: 35px;
+        right: 10px;
+    }
+    .show{
+        display: block;
+    }
+    .hide{
+        display: none;
+    }
+</style>
+<body>
+    <div class="container w-25 mt-5">
+        <div class="icon">
+            <i class="fa-regular fa-sun"></i>
+            <i class="fa-regular fa-moon"></i>
+        </div>
+        <form action="">
+            <label for="">First Name</label>
+            <input type="text" name="" id="" class="form-control firstName">
+            <label for="">Last Name</label>
+            <input type="text" name="" id="" class="form-control lastName">
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" name="" id="" class="form-control pass">
+                <i class="fa-regular fa-eye show"></i>
+                <i class="fa-regular fa-eye-slash hide"></i>
+            </div>
+            <span id="dis" style="color: red; "></span> <br>
+            <button type="button" class="btn btn-success mt-3" >Submit</button>
+            <button type="reset" class="btn btn-danger mt-3">Reset</button>
+            
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    const pass=document.querySelector('.pass');
+    const firstName=document.querySelector('.firstName');
+    const lastName=document.querySelector('.lastName');
+     submit=()=>{
+        
+        if(firstName.value=='' || lastName.value=='' || pass.value==''){
+            document.querySelector('#dis').innerHTML='Please enter value...!';
+        }
+        
+    }
+    const btnSubmit=document.querySelector('.btn-success');
+    btnSubmit.addEventListener('click',()=>{
+        submit()
+    })
+    
+    const show =document.querySelector('.show');
+    const hide =document.querySelector('.hide');
+    show.addEventListener('click',()=>{
+        pass.type='text'
+        show.style.display='none';
+        hide.style.display='block'
+    })
+    hide.addEventListener('click',()=>{
+        pass.type='password'
+        show.style.display='block';
+        hide.style.display='none'
+    })
+    const moon=document.querySelector('.fa-moon');
+    const sun=document.querySelector('.fa-sun');
+    const container=document.querySelector('.container')
+    moon.addEventListener('click',()=>{
+        document.querySelector('body').style.backgroundColor='#3f4040'
+        moon.style.display='none'
+        sun.style.display='block'
+        container.style.backgroundColor='#fff'
+    })
+    sun.addEventListener('click',()=>{
+        document.querySelector('body').style.backgroundColor='#fff'
+        moon.style.display='block'
+        sun.style.display='none'
+        container.style.backgroundColor='#fff'
+    })
+</script>

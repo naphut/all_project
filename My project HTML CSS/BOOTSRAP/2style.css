@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+}
+body{
+    width: 100vw;
+    height: 100vw;
+    position: relative;
+   
+
+
+}
+
+
+
+.header {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: sticky;
+   
+
+
+}
+.header .menu{
+    width:30%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.header .menu i{
+    font-size: 30px;
+    cursor: pointer;
+
+    height: 100px;
+    display: flex;
+    padding: 10px;
+    
+    
+}
+.header .logo{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .logo img{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.header .sub-menu{
+    width:30%;
+    height: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    
+  
+}
+.header .sub-menu .i{
+    font-size: 25px;
+    cursor: pointer;
+
+
+
+}
+.header .sub-menu .login p{
+ padding-top: 10px;
+ font-size: 25px;
+ margin-left: 10px;
+ cursor: pointer;
+}
+.header .drop{
+    position: absolute;
+    top: 200px;
+    position: fixed;
+    width: 00px;
+}
+.modal{
+    font-size:30px;
+    position: absolute;
+    margin-top: 200px;
+    position: fixed;
+
+    
+}
+
+.new{
+    color: aliceblue;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(54, 21, 160);
+}
+.new .box-new{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+ /* content */
+
+
+.card{
+    
+    background-color: brown;
+    border: 5px;
+}
+.card .image{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+
+}
+.card .image img{
+    width: 100%;
+    height: 100%;
+}
+.card  .image:hover img{
+    transform: translate(-5px);
+    transition: all 0.3s;
+}
+.card .title{
+    padding: 20px;
+    position: relative;
+
+
+}
+.card .title h4{
+    font-size: 25px;
+    font-weight: bold;
+}
+.card .title i{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    
+}
+
+
+.footer{
+    
+
+    width: 80%;
+    height: 100%;
+
+    padding: 100px;
+    background-color: black;
+   
+
+}
+.footer{
+    width: 100%;
+   
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+    justify-items: center;
+    text-align: center;
+    align-items: center ;
+}
+.footer .ul{
+   display: none;
+   
+}
+.footer .ten11{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-self: start;
+    align-items: center;
+
+    
+}
+.footer .ten11{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+
+
+}
+footer ul li{
+
+   list-style: none;
+    color: rgb(151, 142, 142);
+}
+.footer h3{
+    font-size: 20px;
+    font-weight: bold;
+   
+    text-shadow:  2px ;
+
+}

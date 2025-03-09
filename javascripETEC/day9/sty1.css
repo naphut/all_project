@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    background-color: rgb(51, 33, 33);
+  
+}
+.header{
+    width: 80%;
+    height: 160px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+}
+.header .logo{
+    width: 25%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    
+}
+.header .logo img{
+    width: 100px;
+    border-radius: 50%;
+    height: 100px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.header  .banner{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* background-color: blue; */
+  
+
+}
+
+.header  .banner img{
+    width: 800px;
+    height: 130px;
+    border-radius: 10px;
+}
+
+
+/* General menu styling */
+.menu {
+    display: flex;
+    background-color: brown;
+    justify-content: space-between; /* Space between elements in the menu */
+    align-items: center;
+    padding: 10px;
+   
+    
+}
+.menu .bars{
+    display: flex;
+    width: 50px;
+    height: 50px;
+ 
+    align-items: center;
+    justify-content: center; 
+}
+
+.menu ul li {
+    margin-right: 40px; /* Spacing between list items */
+}
+
+.menu  ul{
+ 
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: coral; /* Hover effect on menu links */
+}
+
+.menu .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+
+
+
+/* Container for the product form */
+.product {
+    width: 100%;
+    max-width: 500px; /* Set a maximum width */
+    margin: 20px auto; /* Center the form */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Form heading */
+.product h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Label styling */
+.product .form-label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input fields styling */
+.product input[type="text"],
+.product input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+/* Change border color on focus */
+.product input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Buttons styling */
+.product .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Save button styling */
+.product .btn-save {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+/* Cancel button styling */
+.product .btn-cancel {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+}
+
+/* Hover effect for buttons */
+.product .btn:hover {
+    opacity: 0.9;
+}

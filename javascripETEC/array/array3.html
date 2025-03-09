@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+<script>
+    class Person {
+        constructor(id, name, sex) {
+            this.id = id;
+            this.name = name;
+            this.sex = sex;
+        }
+        string() {
+            return `${this.id}  ${this.name}  ${this.sex}`;
+        }
+    }
+    
+    class Student extends Person {
+        constructor(id, name, sex, score1, score2, score3) {
+            super(id, name, sex);
+            this.score1 = score1;
+            this.score2 = score2;
+            this.score3 = score3;
+        }
+        toString() {
+            return `${super.string()}  ${this.score1}  ${this.score2}  ${this.score3}`;
+        }
+    }
+
+    let studentInstance = new Student('1', 'Tom', 'male', 85, 90, 92);
+    document.getElementById('output').innerText = studentInstance.toString();
+</script>
+</html>

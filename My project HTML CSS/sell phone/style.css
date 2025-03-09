@@ -1,0 +1,732 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+
+}
+header{
+    
+    width: 100%;
+    height: 100px;
+    box-shadow: rgba(17,12,46,0.15)0px 48px 100px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 11111;
+    background-color: #fff;
+   position: sticky;
+
+    
+}
+header .header{
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+}
+header .header .logo{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header .header .logo img{
+    width: 180px;
+}
+header .header .menu{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header .header .menu{
+    width: 60%;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+}
+header .header .menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+header .header .menu ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+}
+header .header .menu ul li a:hover{
+    color: rgb(0,72,255);
+}
+
+
+header  .header .search{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+header .header .menu ul li a::before{
+    content: '';
+   left: 0;
+    height: 0;
+    width: 0%;
+ 
+    position: absolute;
+    top: -7px;
+    height: 4px;
+    background-color: #ffca57;
+  
+}
+
+header .header .menu ul li:hover a::before{
+    content: '';
+    width: 100%;
+    transition: 0.7s;
+}
+
+
+header .header .menu  a{
+    position: relative; 
+}
+
+
+
+header .header .menu ul li a::after{
+   content: '';
+   position: absolute;
+   top: 30px;
+   left: 0;
+   height: 5px;
+  
+   width: 0;
+
+ 
+  
+    background-color: #97ff57;
+}
+
+
+header .header .menu ul  li:hover a::after{
+    width: 100%;
+    transition: 0.7s;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search input{
+
+    border: none;
+    outline: none;
+    border:1px solid gray;
+    border-radius: 0 20px 20px 0;
+    padding: 8px;
+    border-left: none;
+
+
+}
+.search .icon{
+    border: 1px solid gray;
+    border-radius: 20px 0 0 20px;
+    padding:8px;
+    border-right: none;
+    
+    
+    
+}
+.search :hover input{
+    border: 2px solid rgb(0 72 ,255);
+    border-left: none;
+}
+.search :hover .icon{
+    border: 2px solid rgb(0, 72,255);
+}
+.shop{
+    position: relative;
+
+}
+.shop_dropdown{
+    width: 80%;
+    margin:auto ;
+    display: flex;
+    position: absolute;
+    top: 30px;
+    display: none;
+
+}
+.content-1{
+    width: 80%;
+    height: 650px;
+    background-color: #022554;
+    margin: auto;
+    border-radius: 30px;
+    padding: 40px 50px;
+    display: flex;
+}
+.content-1 .title {
+    width: 50%;
+    position: relative;
+   
+
+
+    
+
+}
+.content-1 .title .box{
+    position: absolute;
+    top: 120px;
+}
+.content-1 .title .box h2{
+    font-size: 55px;
+    color: #fff;
+}
+.content-1 .title .box span{
+    color: blue;
+}
+.content-1 .title .box p{
+    font-size: 25px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.content-1 .title .box  button{
+    margin-top: 50px;
+    padding: 15px 30px;
+    margin-right: 20px;
+    border-radius: 30px;
+    padding: 40px 50px;
+    background-color: rgba(0,0,255,0748);
+    border:none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.content-1 .title .box  button:hover{
+    background-color: #ffffffef;
+    color: #022554;
+    transition: 0.3s;
+
+}
+
+.content-1  .slide{
+    width: 50%;
+    overflow: hidden;
+} 
+
+  .content-2  .cards{
+    display: flex;
+    flex-direction: columns;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-2  .cards .image img{
+    border-radius: 50%;
+    width: 100%;
+
+}
+  
+.content-2 {
+    width: 80%;
+ 
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.content-2 .cards {
+    position: relative; 
+    width: 300px;
+    overflow: hidden;
+}
+
+.content-2 .cards .title {
+    border-radius: 50px;
+    background-color: #ffffffc4;
+    padding: 20px 30px;
+    width: 200px;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: -10px; /* Initial position */
+    left: 50%;
+    transform: translateX(-50%); 
+    box-shadow: rgb(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.5s; /* Add transition for smooth hover effect */
+}
+
+.content-2 .cards .title:hover {
+    bottom: -30px; /* Moves it further down when hovered */
+    background-color: #022554;
+    color: #fff;
+}
+
+
+
+
+.content-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 0;
+    /* margin-top: 50%; */
+    /* background-color: #355dee; */
+}
+
+
+
+.c-left, .c-right {
+    background-size: cover;
+    background-position: center;
+    width: 45%;
+    height: 650px;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+    padding: 50px;
+}
+
+.c-left {
+    background-image: url('https://xtratheme.com/elementor/gadgets/wp-content/uploads/sites/108/2023/04/bg3-1.jpg');
+}
+
+.c-right {
+    background-image: url('https://xtratheme.com/elementor/gadgets/wp-content/uploads/sites/108/2023/04/bg2-1.jpg');
+}
+
+.c-title h6 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.c-title h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.c-title p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    max-width: 75%;
+}
+
+button {
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+
+}
+
+.a {
+    background-color: #fff;
+    color: #355dee;
+}
+
+.b {
+    background-color: rgba(3, 91, 254, 0.748);
+    color: white;
+}
+
+.a:hover, .b:hover {
+    background-color: rgba(0, 10, 28, 0.748);
+    color: white;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+/* for content-4 */
+
+.content-4{
+    margin-left: 100px;
+    width: 100% ;
+    
+
+}
+
+
+.content-4 .col-3 {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    
+  
+}
+
+
+.content-4 .col-3 .cards {
+    width: 400px;
+  height:600px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+
+    text-align: center;
+
+ 
+    border-radius: 10px;
+}
+.content-4 .col-3 .cards .image{
+    
+    margin-top: 70px;
+    margin-left: 100px;
+   
+}
+.content-4 .col-3 .cards .image img{
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+   
+}
+
+
+
+.content-4  .cards .img1{
+    display: block;
+}
+.content-4  .cards .img2{
+    display: none;
+}
+.content-4  .cards:hover .img1{
+    display: none;
+}
+.content-4  .cards:hover .img2{
+    display: block;
+}
+
+
+
+.content-4 .cards .title h3{
+    font-size: 25px;
+
+}
+.content-4 .cards .title i{
+    font-size: 18px;
+}
+.content-4 .cards .title i{
+    color: gold;
+}
+.content-4 .cards .title i:nth-child(6){
+    color: #333;
+}
+.content-4 .cards .title p:nth-child(7){
+    color:red;
+    font-size: 25px;
+}
+
+
+.add-to {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+
+.add-to .button {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-to .button button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: rgb(63, 142, 231, 0.996); 
+    border: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.content-4 .col-3 .cards:hover {
+    transform: scale(1.05); 
+}
+.sub-menu {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 40px;
+  
+}
+
+.sub-menu i {
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
+
+.content-4:hover .add-to {
+    display: block;
+}
+
+
+.content-4 .cards:hover h3 {
+    color: rgb(15, 142, 231, 0.996);
+}
+
+.content-4 .cards:hover .add-to i:hover {
+    background-color: aquamarine;
+    color: #fff;
+}
+
+
+
+
+
+/* banner my-5 */
+
+
+.banner  {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding: 60px;
+    border-radius: 40px;
+    background-image: url(https://xtratheme.com/elementor/gadgets/wp-content/uploads/sites/108/2023/05/bg4-1.jpg);
+}
+
+.banner .banner-left{
+    width: 50%;
+    height:100%;
+   
+}
+.banner .banner-left p{
+    color: #fff;
+    height: 100%;
+    font-size: 12px;
+    align-self: center;
+    background-color: #022554;
+    padding: 5px;
+    width: 25%;
+    text-align: center;
+    border-radius: 10px;
+}
+.banner .banner-let h2{
+    font-size: 50px;
+    color: #022554;
+}
+.banner .banner-let font{
+    color: rgb(47,47, 255);
+}
+.banner-title{
+    margin-top: 50px;
+    width: 100%;
+    opacity: 0.9;
+    color: rgba(2,37, 84,.8);
+    
+}
+.banner-left  button{
+    padding: 10px 20px ;
+    border: none;
+    border-radius: 10px;
+    margin-top: 80px;
+    color: #fff;
+    display: flex;
+    background-color: rgb(57,57,255);
+    font-size: 20px;
+    background-color: rgb(57,57,255);
+   
+}
+.banner-let button:hover{
+    background-color: #543302;
+    transition: 0.5s;
+}
+font{
+    color: rgb(57,57,255);
+}
+.banner .banner-right{
+    width: 50%;
+    height: 100%;
+}
+.banner .banner-right img{
+    width: 100%;
+}
+
+
+footer {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 90px;
+}
+footer .footer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+footer .footer .footer-on{
+    width: 90%;
+   margin-left: 100px;
+   overflow: hidden;
+    height: 100%;
+    top: -140px;
+    left: 10%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    background-image: url(https://xtratheme.com/elementor/gadgets/wp-content/uploads/sites/108/2023/04/bg-1.jpg);
+
+
+}
+footer .footer .footer-on .footer-title{
+    width: 50%;
+    padding: 30px;
+}
+footer .footer .footer-on .footer-title h1{
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+}
+footer .footer .footer-on .footer-title font{
+    color: blue;
+}
+footer .footer .footer-on .footer-title p{
+    color: #fff;
+    font-size: 20px;
+    opacity: 0.9;
+    
+}
+footer .footer .footer-on .subscribe{
+    width: 50%;
+    display: flex;
+    position: relative;
+}
+footer .footer .footer-on .subscribe{
+    padding: 15px;
+    margin-left: 50%;
+    width: 60%;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background-color: #ffffff0f;
+    
+}
+footer .footer .footer-on .subscribe button{
+    position: absolute;
+    right: 150px;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #0088ff;
+    color: #fff;
+
+}
+footer .footer .footer-on .subscribe button:hover{
+    background-color: #fff;
+    color: #333;
+}
+
+
+footer .footer .footer-under{
+    width: 90%;
+    background-color: #eff5fc;
+    margin: auto;
+    height: 450px;
+    border-radius: 40px;
+    display: flex;
+    padding-top: 120px;
+
+}
+footer .footer .footer-under .logo{
+    width: 30%;
+    height: 300px;
+    padding: 30px;
+    /* background-color: #97ff57; */
+    
+    
+}
+footer .footer .footer-under .logo img{
+   width: 300px;
+   display: flex;
+} 
+
+
+footer .footer .footer-under .about{
+    display: flex;
+    width: 100%;
+    padding:  30px;
+    height: 300px;
+}
+footer .footer .footer-under .about .link{
+    width: 100%;
+    /* background-color: #ff8957; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer .footer-under .about .link h2{
+    font-size: 40px;
+    font-weight:10px ;
+}
+footer .footer .footer-under .about .link ul{
+    list-style: none;
+}
+footer .footer .footer-under .about .link ul a{
+    text-decoration: none;
+    color: #333;
+    opacity: 0.8;
+    padding: 30px;
+}
+
+
+
+
+.footer-under .link ul li a{
+    text-decoration: none;
+    color: #333;
+    opacity: 0.8;
+} 
+footer-under .link ul li a{
+    text-decoration: none;
+    color: #333;
+    opacity: 0.8;
+}

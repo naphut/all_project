@@ -1,0 +1,100 @@
+*{
+   
+    overflow-x: hidden;
+    margin: auto;
+    padding: auto;
+    background-color: gray;
+
+}
+
+
+
+
+footer {
+    background-color: #ffff;
+    padding: 20px;
+}
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+.footer .box-container h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+.footer .box a {
+    display: block;
+    margin: 0.5rem 0;
+    color: #555;
+    text-decoration: none;
+}
+.footer .box .email,
+.footer .box .btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+.footer .box .email {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.footer .box .btn {
+    
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 350px) {
+    
+    .footer .box-container {
+       
+       
+        width: 90%;
+       
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        
+        width: 30rem;
+        box-shadow: var(--black) var(--box-shadow);
+        border-radius: 5rem;
+        background-color: #fff;
+        display: block;
+        border-radius: 5px;
+    }
+    #menu-btn {
+        display: inline-block;
+        
+    }
+   
+}
+@media (max-width: 770px) {
+
+
+    .footer .box-container {
+        width: 90%;
+        
+       
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        
+        width: 30rem;
+        box-shadow: var(--black) var(--box-shadow);
+        border-radius: 5rem;
+        background-color: #fff;
+        display: block;
+        border-radius: 5px;
+    }
+    #menu-btn {
+        display: inline-block;
+
+
+        
+    }
+}

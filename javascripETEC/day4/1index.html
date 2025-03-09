@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  
+</body>
+<script>
+     function input(){
+       let id,name,sex,score;
+       id="1001";
+       name="naphut";
+       sex="M";
+       score="10";
+       document.write(`
+                <h1>id =${id}</h1>
+                <h1>name =${name}</h1>
+                <h1>sex =${sex}</h1>
+                <h1>score =${score}</h1>
+                
+                
+       `);
+        
+    }
+    input();
+    function sum(a,b,c){
+        document.write(`<h1>`,a,`+`,`c`,`=`,a+b+c);
+            
+    }
+    document.write("<h1>none return function has parameters</h1>");
+    sum(10,20,30);
+
+    
+    function login(username ,password){
+        if(username ==='admin'&& password==='1234'){
+            document.write(`<h1 style="color:green;">Login successful</h1>`);
+        }else{
+            document.write(`<h1 style="color:red;">Login failed</h1>`);
+        }
+    }
+    username=prompt("Enter you username:");
+    password=prompt("Enter you password:");
+    login(username ,password);
+
+
+</script>
+</html>

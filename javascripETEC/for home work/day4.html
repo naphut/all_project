@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var array = ["iphone", "paid", "aroid", "nokia"];
+
+    console.log("1. for loop...");
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+    }
+
+    console.log("2. while loop...");
+    let j = 0;
+    while (j < array.length) {
+        console.log(array[j]);
+        j++;
+    } 
+
+    console.log("3. forEach loop...");
+    array.forEach(value => {
+        console.log(value);
+    });
+
+    console.log("4. map function...");
+    let value=array.map(var1=>{
+        return var1==200;
+    })
+    console.log(filter);
+    console.log("5 returns of map function...");
+    let fill=array.filter(val=>{
+        return val==200;;
+    });
+    console.log("return fill",fill);
+
+
+</script>
+</html>
+

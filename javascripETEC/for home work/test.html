@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day of the Week</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <label for="day">Enter a number (1-7): </label>
+  <input type="number" id="day" min="1" max="7">
+  <button onclick="Showday()">Get Day</button>
+  
+  <p id="result"></p>
+
+  <script>
+    function Showday() {
+      const days = ["Out of Date", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+      const day = Number(document.getElementById('day').value);
+      const result = days[day] || "Out of Date";
+      document.getElementById('result').innerHTML = "Result is : " + result;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,521 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::selection{
+    color: #fff;
+    background-color: #0fe7d5;
+}
+header{
+    width: 100%;
+    height: 90px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 11111;
+    background-color: aliceblue;
+}
+header .header{
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+}
+header .header .logo{
+    width: 30%;
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    
+}
+header .header .logo img{
+    width: 140px;
+    height: 40px;
+    margin-top: 20px;
+}
+header .header .menu{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+header .header .menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+header .header .menu ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+}
+header .header .menu ul li a:hover{
+    color:blue;
+}
+header .header .search{
+    width: 30%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+.search input{
+    border: none;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 0px 20px 20px 0px;
+    padding: 8px;
+    border-left: none;
+}
+.search .icon{
+    border: 1px solid gray;
+    border-radius: 20px 0px 0px 20px;
+    padding: 8px;
+    border-right: none;
+}
+.search:hover input{
+    border: 2px solid blue;
+    border-left: none;
+}
+.search:hover .icon{
+    border: 2px solid blue;
+    border-right: none;
+}
+.content-1{
+    width: 80%;
+    height: 650px;
+    background-color: #022554;
+    margin: auto;
+    border-radius: 30px;
+    padding: 44px 50px ;
+    display: flex;
+}
+.content-1 .title{
+    width: 50%;
+    position: relative;
+}
+.content-1 .title .box{
+    position: absolute;
+
+
+top: 120px;
+}
+.content-1 .title .box h2{
+    font-size: 55px;
+    color: #fff;
+}
+.content-1 .title .box h2 span{
+    color:blue;
+}
+.content-1 .title .box p{
+    font-size: 25px;
+    color:#fff;
+}
+.content-1 .title .box button{
+    margin-top: 50px;
+    padding: 15px 30px;
+    margin-right: 20px;
+    border-radius: 45px;
+    background-color: rgba(0,0,255,0.748);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+.content-1 .title .box button:hover{
+    background-color:#ffffffef;
+    color: #022554;
+   transition: 0.3s;
+}
+.content-1 .slides{
+    width: 50%;
+    overflow: hidden;
+}
+.content-1 .slides .slide .carousel-inner{
+    width: 100%;
+    
+}
+.content-2{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 30px;
+    position: relative;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: none;
+}
+.content-2 .card .image img{
+    border-radius: 50%;
+    width: 100%;
+}
+.content-2 .card .title{
+    border-radius: 50px;
+    background-color: #ffffffc4;
+    padding: 20px 30px ;
+    width: 200px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: -50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px ;
+}
+.content-2 .card .title:hover{
+    bottom: -30px;
+    transition: 0.4s;
+    color: #fff;
+    background-color:  #022554;;
+    
+
+}
+.content-3{
+    /* width: 80%; */
+    display: flex;
+    gap: 30px;
+
+}
+
+.content-3 .c-right{
+    /* background-attachment: fixed; */
+    background-image: url(https://xtratheme.com/elementor/gadgets/wp-content/uploads/sites/108/2023/04/bg2-1.jpg);
+    width: 900px;
+    height: 650px;
+    margin-left: 50px;
+    margin-top: 100px;
+    border-radius: 5%;
+}
+.c-right .c-title{
+    width: 50%;
+    color: #fff;
+    
+
+}
+.c-right .c-title h6{
+    padding-top: 100px;
+    padding-left: 70px;
+    
+
+}
+.c-right .c-title h1{
+    padding-left: 70px;
+    font-size: 50px;
+    font-weight: bold;
+    
+
+}
+.c-right .c-title p{
+    padding-left: 70px;
+    
+
+}
+.content-3 .c-left{
+    /* background-attachment: fixed; */
+    background-image: url(https://xtratheme.com/elementor/gadgets/wp-content/uploads/sites/108/2023/04/bg3-1.jpg);
+    width: 900px;
+    height: 650px;
+    margin-right: 50px;
+    margin-top: 100px;
+    border-radius: 5%;
+}
+.c-left .c-title{
+    width: 50%;
+    color: #fff;
+    
+
+}
+.c-left .c-title h6{
+    padding-top: 100px;
+    padding-left: 70px;
+    
+
+}
+.c-left .c-title h1{
+    padding-left: 70px;
+    font-size: 50px;
+    font-weight: bold;
+    
+
+}
+.c-left .c-title p{
+    padding-left: 70px;
+
+
+}
+ .a{
+    width: 200px;
+    margin-top: 90px;
+    padding: 15px 30px;
+    margin-left: 60px;
+    border-radius: 45px;
+    background-color:#fff;
+    border: none;
+    color: #355dee;
+    font-size: 20px;
+    font-weight: bold;
+}
+.a:hover{
+    background-color: rgba(0, 10, 28, 0.748);
+    color: #ffffff;
+    transition: 0.5s;
+}
+ .b{
+    width: 200px;
+    margin-top: 90px;
+    padding: 15px 30px;
+    margin-left: 60px;
+    border-radius: 45px;
+    background-color: rgba(3, 91, 254, 0.748);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+.b:hover{
+    background-color:#fff;
+    color: rgba(0, 10, 28, 0.748);
+    transition: 0.5s;
+}
+.content-4{
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+.content-4 .card-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    outline:auto;
+    border-radius: 10%;
+    height: 420px;
+    margin-top: 25px;
+    
+    
+}
+.content-4 .card-2 .image-2 img{
+    width: 100%;
+    
+}
+.content-4 .card-2 .title-2{
+    padding: 20px 30px ;
+    width: 200px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: -25px;
+    
+   
+}
+.sub-menu i{
+    font-size: 18px;
+    padding: 7px;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+.content-4 .card-2:hover .add-to i:hover{
+   background-color: #355dee;
+   color: #fff;
+   display: block;
+   transition: 0.5s;
+}
+.shop{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background: transparent;
+   color: #ffffff;
+    backdrop-filter: blur(50px);
+    background-image: url(  https://xtratheme.com/elementor/gadgets/wp-content/uploads/sites/108/2023/05/bg4-1.jpg);
+    margin-top: 40px;
+    width: 100%;
+    height: 700px;
+    border-radius: 30px;
+}
+.shop img{
+    margin-right: 60px;
+    
+}
+.hshop h6{
+    background-color: #032d64;
+    width: 140px;
+    height: 30px;
+    /* margin-bottom: 250px; */
+    border-radius: 7px;}
+    h6{
+        color: #fff;
+        font-size: 15px;
+        padding-left: 7px;
+        padding-top: 7px;
+    }
+.hshop{
+   
+    width: 80%;
+    margin: auto;
+}
+.hshop{
+    color: #032d64;
+
+}
+.hshop span{
+    color: #062fd1;
+
+}
+.hshop h1{
+    font-size: 50px;
+
+}
+.hshop button{
+   
+    margin-top: 50px;
+    padding: 15px 30px;
+    margin-right: 20px;
+    border-radius: 45px;
+    background-color: rgba(0,0,255,0.748);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* .hshop  a{
+    background-color: #022554;
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+}
+.hshop a i{
+    padding-top: 20px;
+    
+    
+} */
+.hshop button:hover{
+    background-color:#ffffffef;
+    color: #022554;
+   transition: 0.3s;
+   
+}
+.footer{
+    width: 95%;
+    height: 100%;
+    background-color: #eff5fc;
+    margin: auto;
+    border-radius: 50px;
+    position: relative;
+    top: 170px;
+}
+.footer-fuist{
+    width: 87%;
+    display: flex;
+    position: absolute;
+    top: -150px;
+    left: 100px;
+    height: 250px;
+    border-radius: 30px;
+    background-image: url(  https://xtratheme.com/elementor/gadgets/wp-content/uploads/sites/108/2023/04/bg-1.jpg);
+}
+.footer-fuist h1 span{
+    color: #062fd1;
+}
+.footer-fuist .email{
+    display: flex;
+    margin-top: 70px;
+    margin-left: 300px;
+
+}
+.footer-fuist .email input{
+    position: relative;
+    border: 1px solid gray;
+    outline: none;
+    width: 500px;
+    height: 60px;
+    border-radius: 50px;
+    
+    background: none;
+
+
+}
+.footer-fuist .email button{
+    position: absolute;
+    margin-left: 370px;
+    border: none;
+    outline: none;
+    width: 130px;
+    height: 60px;
+    background-color: #0088ff;
+    border-radius: 50px;
+}
+.footer-fuist h6{
+    padding-left: 50px;}
+.footer-fuist h1{
+    padding-top: 40px;
+    padding-left: 50px;
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+}
+.email{
+    margin-left: 30px;
+}
+.after-footer{
+    display: flex;
+}
+ .footer .coll-2{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+}
+.coll-1{
+    margin-top: 150px;
+    padding-left: 100px;
+}
+.coll{
+    
+    padding-left: 10px;
+}
+.footer .image{
+    width: 75%;
+    height: 40px;
+    margin: auto;
+    margin-top: 150px;
+}
+.footer .image img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.coll .icon{
+    display: flex;
+    padding-left: 20px;
+}
+
+.coll .icon a{
+padding-left: 20px;
+}
+.coll .icon  i{
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    color: #032d64;
+    
+}
+.coll .text  {
+    padding-left: 50px;
+}
+.coll .text h6 {
+    color: #032d64;
+    font-size: 17px;
+}
+
